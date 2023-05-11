@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/blue_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/loginLogoID"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/multilogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MultiSpan"
+            android:textSize="30sp"
+            android:layout_below="@id/loginLogoID"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/loginLayout1ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true">
+
+
+        <EditText
+            android:id="@+id/loginEmailID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:textSize="25sp"
+            android:background="#F1F1F1"
+            android:padding="6dp"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/loginPasswordID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:textSize="25sp"
+            android:layout_margin="5dp"
+            android:padding="6dp"
+            android:background="#F1F1F1"
+            android:layout_below="@id/loginEmailID"/>
+        <TextView
+            android:id="@+id/loginForgetPasswordID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Froget Password?"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/loginPasswordID"/>
+
+        <Button
+            android:id="@+id/loginBtnID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="25sp"
+            android:layout_below="@id/loginForgetPasswordID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_btn"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loginLinearLayout1ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginLayout1ID"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/loginCreateAccountID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account?"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/loginLayout1ID"/>
+
+        <TextView
+            android:id="@+id/loginSignInID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click here"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/loginLayout1ID"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or SignIn with"
+        android:textSize="12sp"
+        android:layout_above="@id/loginLinearlayout2ID"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/loginLinearlayout2ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_centerInParent="true">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fb"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/instagram"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/linkedin"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
