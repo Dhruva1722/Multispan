@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/blue_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIconID"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/usericon"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/cardview"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/profileIconID"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/profileUserIconID"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/person"
+                android:layout_marginRight="10dp" />
+            <TextView
+                android:id="@+id/profileNameID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multispan Company"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/profileEmailIconID"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/email"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/profileEmailID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multispan@gmail.com"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/profileNumIconID"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/call"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/profileNumID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+9123456789"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/profileLocationIconID"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/placeholder"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/profileLocationID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vatva GIDC"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

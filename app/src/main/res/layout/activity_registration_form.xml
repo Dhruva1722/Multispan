@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginPage">
+    tools:context=".RegistrationForm">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,7 +13,7 @@
         android:background="@drawable/blue_bg">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/loginLogoID"
+            android:id="@+id/registerLogoID"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/multilogo"
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="MultiSpan"
             android:textSize="30sp"
-            android:layout_below="@id/loginLogoID"
+            android:layout_below="@id/registerLogoID"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"/>
@@ -34,7 +35,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/loginLayout1ID"
+        android:id="@+id/registerLayout1ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -42,16 +43,27 @@
 
 
         <EditText
-            android:id="@+id/loginEmailID"
+            android:id="@+id/registerNameID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:textSize="25sp"
+            android:background="#F1F1F1"
+            android:padding="6dp"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/registerEmailID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Email"
             android:textSize="25sp"
             android:background="#F1F1F1"
             android:padding="6dp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:layout_below="@id/registerNameID"/>
         <EditText
-            android:id="@+id/loginPasswordID"
+            android:id="@+id/registerPasswordID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="password"
@@ -59,24 +71,16 @@
             android:layout_margin="5dp"
             android:padding="6dp"
             android:background="#F1F1F1"
-            android:layout_below="@id/loginEmailID"/>
-        <TextView
-            android:id="@+id/loginForgetPasswordID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Froget Password?"
-            android:textSize="15sp"
-            android:layout_margin="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/loginPasswordID"/>
+            android:layout_below="@id/registerEmailID"/>
+
 
         <Button
-            android:id="@+id/loginBtnID"
+            android:id="@+id/registerBtnID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Registration"
             android:textSize="25sp"
-            android:layout_below="@id/loginForgetPasswordID"
+            android:layout_below="@id/registerPasswordID"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_btn"/>
@@ -84,27 +88,27 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/loginLinearLayout1ID"
+        android:id="@+id/registerLinearLayout1ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/loginLayout1ID"
+        android:layout_below="@id/registerLayout1ID"
         android:layout_centerHorizontal="true">
 
         <TextView
-            android:id="@+id/loginCreateAccountID"
+            android:id="@+id/registerHaveAccountAccountID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create Account?"
-            android:textSize="20sp"
+            android:text="Already have an Account?"
+            android:textSize="17sp"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/loginLayout1ID"/>
+            android:layout_below="@+id/registerLayout1ID"/>
 
         <TextView
-            android:id="@+id/loginSignUpID"
+            android:id="@+id/registerLogInID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SignUp"
+            android:text="login"
             android:textSize="15sp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
@@ -118,11 +122,11 @@
         android:layout_height="wrap_content"
         android:text="or SignIn with"
         android:textSize="12sp"
-        android:layout_above="@id/loginLinearlayout2ID"
+        android:layout_above="@id/registerLinearlayout2ID"
         android:layout_centerInParent="true"/>
 
     <LinearLayout
-        android:id="@+id/loginLinearlayout2ID"
+        android:id="@+id/registerLinearlayout2ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -131,22 +135,29 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/registerFBID"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/fb"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/registerInstaID"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
             android:src="@drawable/instagram"/>
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/registerLinkedInID"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="5dp"
             android:src="@drawable/linkedin"/>
 
     </LinearLayout>
+
+
+
+
 
 
 </RelativeLayout>

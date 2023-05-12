@@ -35,6 +35,15 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        CardView humidityCardView = view.findViewById(R.id.humidityCardViewID);
+        humidityCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LiveModeling.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

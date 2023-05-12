@@ -8,28 +8,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class loginPage extends AppCompatActivity {
-        Button loginbtn;
-        TextView signup;
+public class RegistrationForm extends AppCompatActivity {
+    Button registerbtn;
+    TextView login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
-        loginbtn = findViewById(R.id.loginBtnID);
-        signup = findViewById(R.id.loginSignUpID);
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_registration_form);
+        login = findViewById(R.id.registerLogInID);
+        registerbtn = findViewById(R.id.registerBtnID);
+
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), loginPage.class);
+                startActivity(intent);
+            }
+        });
+
+        registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegistrationForm.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
