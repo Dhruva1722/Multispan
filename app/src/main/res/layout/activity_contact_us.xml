@@ -151,8 +151,7 @@
                 android:hint="Message"
                 android:layout_margin="5dp"
                 android:padding="30dp"
-                android:background="#EFEDED"
-                />
+                android:background="#EFEDED" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -165,59 +164,105 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="15dp">
-
-                <Button
+                android:layout_margin="15dp"
+                android:layout_gravity="center_horizontal">
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_btn"
-                    android:text="Software"
-                    android:layout_marginRight="3dp"
-                    android:padding="4dp"/>
+                    android:orientation="vertical"
+                    android:padding="7dp">
 
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_btn"
-                    android:text="HR"
-                    android:layout_marginRight="3dp"
-                    android:padding="4dp"/>
-                <Button
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/web"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Web"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                 </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_btn"
-                    android:text="Design"
-                    android:layout_marginRight="3dp"
-                    android:padding="4dp"/>
+                    android:orientation="vertical"
+                    android:padding="7dp">
 
-            </LinearLayout>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="other"
-                android:background="@drawable/rounded_btn"
-                android:layout_gravity="center_horizontal"/>
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/hr" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="HR"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/design" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Designing"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/other" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Other"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
         </LinearLayout>
 
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp"
+                android:text="Send message"/>
+        </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:layout_alignParentBottom="true"
-    android:layout_margin="10dp"
-    android:text="Send message"/>
-
-
 
 
 </RelativeLayout>
