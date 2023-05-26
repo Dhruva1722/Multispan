@@ -7,7 +7,7 @@
     tools:context=".HomeFragment">
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/framelayout_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <RelativeLayout
@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:rowCount="4"
             android:columnCount="3"
-            android:layout_margin="30dp">
+            android:layout_margin="15dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/liveModelingCardViewID"
@@ -78,16 +78,17 @@
                     android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/temphum"/>
+
                     <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="139dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="0dp"
                         android:text="Temprature Humidity"
-                        android:textSize="17sp"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"/>
+                        android:textAlignment="center"
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 

@@ -6,19 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".LiveModeling">
 
-
-
-    <FrameLayout
-        android:id="@+id/live_modeling_containerID"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:src="@drawable/error_img"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_vertical"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/error_img"/>
 
 </RelativeLayout>

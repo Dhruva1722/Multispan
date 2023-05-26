@@ -129,7 +129,7 @@
             based design from solid-state based technology. In the same period, the company setup area was totaling
             around 3500 sq ft area."
             android:layout_margin="7dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="@color/black"
             android:padding="5dp"/>
 

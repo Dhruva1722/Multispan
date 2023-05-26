@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/bottomnav_progile"
-        android:title="Profile"
+        android:title="Account"
         android:icon="@drawable/profile"/>
 
 

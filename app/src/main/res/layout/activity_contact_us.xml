@@ -21,7 +21,7 @@
             android:layout_marginTop="10dp"
             android:text="Get In Touch"
             android:textColor="#ECE9E9"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="60dp"
@@ -253,16 +253,18 @@
         </LinearLayout>
 
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_margin="5dp"
-                android:text="Send message"/>
+
         </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:text="Send message"
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

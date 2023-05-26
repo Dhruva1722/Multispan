@@ -15,19 +15,19 @@
             android:id="@+id/loginLogoID"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/multilogo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:src="@drawable/multilogo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MultiSpan"
-            android:textSize="30sp"
             android:layout_below="@id/loginLogoID"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:text="MultiSpan"
             android:textColor="@color/white"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="30sp" />
 
 
     </RelativeLayout>
@@ -45,21 +45,24 @@
             android:id="@+id/loginEmailID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Email"
-            android:textSize="25sp"
+           android:layout_margin="10dp"
             android:background="#F1F1F1"
-            android:padding="6dp"
-            android:layout_margin="5dp"/>
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textSize="25sp" />
+
         <EditText
             android:id="@+id/loginPasswordID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="password"
-            android:textSize="25sp"
-            android:layout_margin="5dp"
-            android:padding="6dp"
+            android:layout_below="@id/loginEmailID"
+           android:layout_margin="10dp"
             android:background="#F1F1F1"
-            android:layout_below="@id/loginEmailID"/>
+            android:hint="password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textSize="25sp" />
         <TextView
             android:id="@+id/loginForgetPasswordID"
             android:layout_width="wrap_content"
@@ -72,10 +75,10 @@
 
         <Button
             android:id="@+id/loginBtnID"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_below="@id/loginForgetPasswordID"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
@@ -131,18 +134,18 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/fb"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="5dp"
             android:src="@drawable/instagram"/>
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="5dp"
             android:src="@drawable/linkedin"/>
 

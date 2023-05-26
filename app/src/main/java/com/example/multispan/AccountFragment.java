@@ -53,6 +53,15 @@ public class AccountFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        LinearLayout logout = view.findViewById(R.id.lyLogoutID);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), loginPage.class);
+                startActivity(intent);
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
