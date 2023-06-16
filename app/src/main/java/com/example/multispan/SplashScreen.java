@@ -37,8 +37,28 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(getApplicationContext(), loginPage.class));
             }
-        },3000);
+        },2000);
 
 
+    }
+    private void navigateToScreen() {
+        // Check if the user is already logged in
+        if (isUserLoggedIn()) {
+            // User is logged in, navigate to the home screen
+            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            startActivity(intent);
+        } else {
+            // User is not logged in, navigate to the registration/login screen
+            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            startActivity(intent);
+        }
+
+        finish(); // Finish the splash activity to prevent navigating back to it
+    }
+    private boolean isUserLoggedIn() {
+        // TODO: Implement your logic to check if the user is logged in
+        // You can use SharedPreferences, a flag in the database, or any other method
+        // Return true if the user is logged in, false otherwise
+        return false; // Placeholder value, update with your actual implementation
     }
 }

@@ -1,33 +1,39 @@
 package com.example.multispan;
 
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.multispan.SQL.DBHelper;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class loginPage extends AppCompatActivity {
 
-        EditText email,pass;
-        Button loginbtn;
-        TextView signup;
-        DBHelper dbHelper;
+    private   EditText email,pass;
+    private  Button loginbtn;
+    private  TextView signup;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
+        mAuth = FirebaseAuth.getInstance();
+
         email = findViewById(R.id.loginEmailID);
         pass = findViewById(R.id.loginPasswordID);
-        dbHelper = new DBHelper(this);
+
         loginbtn = findViewById(R.id.loginBtnID);
         signup = findViewById(R.id.loginSignUpID);
 
@@ -37,24 +43,56 @@ public class loginPage extends AppCompatActivity {
             public void onClick(View v) {
             String emailCheck = email.getText().toString();
             String passCheck = pass.getText().toString();
-            Cursor cursor = dbHelper.getData();
-                if(cursor.getCount() == 0){
-                Toast.makeText(loginPage.this,"No entries Exists",Toast.LENGTH_LONG).show();
-            }
-                if (loginCheck(cursor,emailCheck,passCheck)) {
-                Intent intent = new Intent(loginPage.this,MainActivity.class);
-                intent.putExtra("email",emailCheck);
-                email.setText("");
-                pass.setText("");
-                startActivity(intent);
-            }else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(loginPage.this);
-                builder.setCancelable(true);
-                builder.setTitle("Wrong Credential");
-                builder.setMessage("Wrong Credential");
-                builder.show();
-            }
-                dbHelper.close();
+
+                // validations for input email and password
+                if (TextUtils.isEmpty(emailCheck)) {
+                    Toast.makeText(getApplicationContext(),
+                                    "Please enter email!!",
+                                    Toast.LENGTH_LONG)
+                            .show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(passCheck)) {
+                    Toast.makeText(getApplicationContext(),
+                                    "Please enter password!!",
+                                    Toast.LENGTH_LONG)
+                            .show();
+                    return;
+                }
+                // signin existing user
+                mAuth.signInWithEmailAndPassword(emailCheck, passCheck)
+                        .addOnCompleteListener(
+                                new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(
+                                            @NonNull Task<AuthResult> task)
+                                    {
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(getApplicationContext(),
+                                                            "Login successful!!",
+                                                            Toast.LENGTH_LONG)
+                                                    .show();
+
+                                            // if sign-in is successful
+                                            // intent to home activity
+                                            Intent intent
+                                                    = new Intent(loginPage.this,
+                                                    MainActivity.class);
+                                            startActivity(intent);
+                                        }
+
+                                        else {
+
+                                            // sign-in failed
+                                            Toast.makeText(getApplicationContext(),
+                                                            "Login failed!!",
+                                                            Toast.LENGTH_LONG)
+                                                    .show();
+
+                                        }
+                                    }
+                                });
         }
         });
 
@@ -66,17 +104,16 @@ public class loginPage extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-    private boolean loginCheck(Cursor cursor, String emailCheck, String passCheck) {
-        while (cursor.moveToNext()){
-            Log.i("SQLite Data: ",cursor.getString(0));
-            if (cursor.getString(0).equals(emailCheck)) {
-                if (cursor.getString(2).equals(passCheck)) {
-                    return true;
-                }
-                return false;
-            }
+        // Check if user is already authenticated and bypass login
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Intent intent = new Intent(loginPage.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close the login activity
         }
-        return false;
     }
 }

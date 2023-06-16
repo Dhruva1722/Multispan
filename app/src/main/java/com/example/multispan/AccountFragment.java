@@ -10,11 +10,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class AccountFragment extends Fragment {
+
+
+    private FirebaseAuth mAuth;
 
     public AccountFragment() {
         // Required empty public constructor
@@ -25,6 +31,9 @@ public class AccountFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        mAuth = FirebaseAuth.getInstance();
+
 
         View view = inflater.inflate(R.layout.fragment_account, container, false);
         LinearLayout profile = view.findViewById(R.id.lyProfileID);
@@ -54,15 +63,22 @@ public class AccountFragment extends Fragment {
             }
         });
 
-        LinearLayout logout = view.findViewById(R.id.lyLogoutID);
-        logout.setOnClickListener(new View.OnClickListener() {
+         LinearLayout logoutbtn = view.findViewById(R.id.lyLogoutID);
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), loginPage.class);
-                startActivity(intent);
+                logoutUser();
             }
         });
         // Inflate the layout for this fragment
         return view;
+    } private void logoutUser() {
+        mAuth.signOut();
+
+        // Redirect to login screen
+        Intent intent = new Intent(getActivity(), loginPage.class);
+        startActivity(intent);
+        getActivity().finish(); // Close the current activity
     }
+
 }

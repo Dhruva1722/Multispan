@@ -135,10 +135,10 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/registerFBID"
+            android:id="@+id/registerGoogleID"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/fb"/>
+            android:src="@drawable/google"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/registerInstaID"

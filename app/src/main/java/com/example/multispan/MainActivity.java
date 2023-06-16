@@ -10,7 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
-import com.example.multispan.SQL.DBHelper;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     BottomNavigationView bottomNavigationView;
-    DBHelper dbHelper;
+
     @Override
     public void onBackPressed(){
         MainActivity.this.finish();
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dbHelper = new DBHelper(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "126724452446",
+    "project_id": "multispan-135ca",
+    "storage_bucket": "multispan-135ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126724452446:android:9e81138410b8f54a5a44cf",
+        "android_client_info": {
+          "package_name": "com.example.multispan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126724452446-feqerkvifd8r28715hi9074bl9d4n7h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjtFrm_Ru_QkIHlLqyWZMlldRQgTGVcYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126724452446-feqerkvifd8r28715hi9074bl9d4n7h5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
