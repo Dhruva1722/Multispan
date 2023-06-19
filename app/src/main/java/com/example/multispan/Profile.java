@@ -45,9 +45,8 @@ public class Profile extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
     private String employeeKey;
-    private EditText employeeNameEdt, employeePhoneEdt, employeeAddressEdt;
-    private Button sendDatabtn;
-    private ImageButton addImgbtn;
+    private EditText employeeNameEdt, employeePhoneEdt, employeeAddressEdt ,employeeDepartmentEdt;
+    private ImageView addImgbtn,sendDatabtn;
     private ImageView profileImageView; // Added ImageView for profile picture
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
@@ -67,6 +66,7 @@ public class Profile extends AppCompatActivity {
         employeeNameEdt = findViewById(R.id.idEdtEmployeeName);
         employeePhoneEdt = findViewById(R.id.idEdtEmployeePhoneNumber);
         employeeAddressEdt = findViewById(R.id.idEdtEmployeeAddress);
+        employeeDepartmentEdt = findViewById(R.id.idEdtEmployeeDepartment);
 
         mAuth = FirebaseAuth.getInstance();
         currentUserUid = mAuth.getCurrentUser().getUid();
@@ -91,6 +91,7 @@ public class Profile extends AppCompatActivity {
                         employeeNameEdt.setText(employeeInfo.getEmployeeName());
                         employeePhoneEdt.setText(employeeInfo.getEmployeeContactNumber());
                         employeeAddressEdt.setText(employeeInfo.getEmployeeAddress());
+                        employeeDepartmentEdt.setText(employeeInfo.getEmployeeDepartment());
                         loadImageFromFirebaseStorage(currentUserUid);
                     }
                 }
@@ -108,11 +109,12 @@ public class Profile extends AppCompatActivity {
                 String name = employeeNameEdt.getText().toString();
                 String phone = employeePhoneEdt.getText().toString();
                 String address = employeeAddressEdt.getText().toString();
+                String department = employeeDepartmentEdt.getText().toString();
 
-                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(phone) || TextUtils.isEmpty(address)) {
+                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(phone) || TextUtils.isEmpty(address) || TextUtils.isEmpty(department)){
                     Toast.makeText(Profile.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    addDataToFirebase(name, phone, address);
+                    addDataToFirebase(name, phone, address,department);
                 }
             }
         });
@@ -152,10 +154,11 @@ public class Profile extends AppCompatActivity {
         }
     }
         // add data to firebase
-        private void addDataToFirebase(String name, String phone, String address) {
+        private void addDataToFirebase(String name, String phone, String address,String department) {
             employeeInfo.setEmployeeName(name);
             employeeInfo.setEmployeeContactNumber(phone);
             employeeInfo.setEmployeeAddress(address);
+            employeeInfo.setEmployeeDepartment(department);
 
             userRef.setValue(employeeInfo)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {

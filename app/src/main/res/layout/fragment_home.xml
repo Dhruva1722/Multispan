@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:rowCount="4"
             android:columnCount="3"
-            android:layout_margin="15dp">
+            android:layout_margin="10dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/liveModelingCardViewID"

@@ -3,6 +3,12 @@
     <style name="Base.Theme.Multispan" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
+        <item name="colorPrimary">#034A97</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
     </style>
 
     <style name="Theme.Multispan" parent="Base.Theme.Multispan" />

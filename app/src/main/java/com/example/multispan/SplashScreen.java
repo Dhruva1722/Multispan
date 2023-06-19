@@ -3,6 +3,7 @@ package com.example.multispan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -20,6 +21,22 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        // Check if it's the first app launch
+        boolean isFirstLaunch = sharedPreferences.getBoolean("isFirstLaunch", true);
+
+        if (isFirstLaunch) {
+            // Show the splash screen
+            // You can use a separate activity or a dialog fragment to display the splash screen
+            // Once the splash screen is dismissed, set isFirstLaunch to false
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isFirstLaunch", false);
+            editor.apply();
+        } else {
+            navigateToScreen();
+            return;
+        }
 
 
         img = findViewById(R.id.splash_img);

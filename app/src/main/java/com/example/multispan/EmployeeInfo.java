@@ -8,6 +8,16 @@ public class EmployeeInfo {
 
     private String employeeAddress;
 
+    private String employeeDepartment ;
+
+    public String getEmployeeDepartment() {
+        return employeeDepartment;
+    }
+
+    public void setEmployeeDepartment(String employeeDepartment) {
+        this.employeeDepartment = employeeDepartment;
+    }
+
     public String getEmployeeImageURL() {
         return employeeImageURL;
     }
