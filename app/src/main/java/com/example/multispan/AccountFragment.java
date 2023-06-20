@@ -72,7 +72,8 @@ public class AccountFragment extends Fragment {
         });
         // Inflate the layout for this fragment
         return view;
-    } private void logoutUser() {
+    }
+    private void logoutUser() {
         mAuth.signOut();
 
         // Redirect to login screen

@@ -1,0 +1,3 @@
+private boolean isValidEmail (CharSequence email){
+                                return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
+                            }

@@ -53,6 +53,7 @@
                 android:id="@+id/loginEmailID"
                 android:drawableRight="@drawable/baseline_mail_outline_24"
                 android:layout_width="match_parent"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -61,43 +62,19 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter password">
+            app:passwordToggleEnabled="true"
+            android:hint="Enter password"
+            app:passwordToggleTint="@color/colorPrimary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/loginPasswordID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:drawableRight="@drawable/baseline_remove_red_eye_24"/>
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-<!--        <EditText-->
-<!--            android:id="@+id/loginEmailID"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:background="#F1F1F1"-->
-<!--            android:hint="Enter Email"-->
-<!--            android:drawableLeft="@drawable/baseline_mail_outline_24"-->
-<!--            android:drawablePadding="10dp"-->
-<!--            android:inputType="textEmailAddress"-->
-<!--            android:padding="10dp"-->
-<!--            android:textSize="25sp" />-->
-
-<!--        <EditText-->
-
-<!--            android:id="@+id/loginPasswordID"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--           android:layout_margin="10dp"-->
-<!--            android:background="#F1F1F1"-->
-<!--            android:hint="password"-->
-<!--            android:inputType="textPassword"-->
-<!--            android:padding="10dp"-->
-<!--            android:textSize="25sp"-->
-<!--            app:endIconMode="password_toggle"/>-->
         <TextView
             android:id="@+id/loginForgetPasswordID"
             android:layout_width="wrap_content"

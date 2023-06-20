@@ -2,6 +2,7 @@ package com.example.multispan;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,12 +13,15 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -26,6 +30,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,14 +47,10 @@ public class Profile extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     private static final String EMPLOYEE_KEY_PREF = "employee_key";
 
-
-    private SharedPreferences sharedPreferences;
-    private String employeeKey;
     private EditText employeeNameEdt, employeePhoneEdt, employeeAddressEdt ,employeeDepartmentEdt;
-    private ImageView addImgbtn,sendDatabtn;
+    private ImageView addImgbtn,sendDatabtn , updateDatabtn ;
     private ImageView profileImageView; // Added ImageView for profile picture
-    private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
+
     private EmployeeInfo employeeInfo;
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
@@ -69,9 +70,14 @@ public class Profile extends AppCompatActivity {
         employeeDepartmentEdt = findViewById(R.id.idEdtEmployeeDepartment);
 
         mAuth = FirebaseAuth.getInstance();
-        currentUserUid = mAuth.getCurrentUser().getUid();
-        userRef = FirebaseDatabase.getInstance().getReference("EmployeeInfo").child(currentUserUid);
-        employeeInfo = new EmployeeInfo();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            currentUserUid = currentUser.getUid();
+            userRef = FirebaseDatabase.getInstance().getReference("EmployeeInfo").child(currentUserUid);
+            employeeInfo = new EmployeeInfo();
+        } else {
+            Toast.makeText(Profile.this, "Errorrr occure", Toast.LENGTH_SHORT).show();
+        }
 
         firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference("ProfileImages");
@@ -79,6 +85,8 @@ public class Profile extends AppCompatActivity {
         sendDatabtn = findViewById(R.id.idBtnSendData);
         profileImageView = findViewById(R.id.profileIconID);
         addImgbtn = findViewById(R.id.profileBtnID);
+        updateDatabtn = findViewById(R.id.idBtnEditData);
+
 
 
         // Retrieve the employee data from Firebase and set it to the respective EditText fields
@@ -103,6 +111,7 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+        // save data to firebase
         sendDatabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +136,17 @@ public class Profile extends AppCompatActivity {
         });
 
 
+        updateDatabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showEditProfilePopup();
+            }
+        });
+
+
+
     }
+    // image picker to upload it
         private void openImagePicker() {
             Intent intent = new Intent();
             intent.setType("image/*");
@@ -197,6 +216,8 @@ public class Profile extends AppCompatActivity {
             finish(); // Optional: Go back to the main screen if no profile image is selected
         }
     }
+
+    // load image from storage
     private void loadImageFromFirebaseStorage(String employeeKey) {
         StorageReference imageRef = storageReference.child(employeeKey + ".jpg");
 
@@ -216,4 +237,80 @@ public class Profile extends AppCompatActivity {
         });
 
     }
+
+    // Edit function
+    private void showEditProfilePopup() {
+        // Create a dialog builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = getLayoutInflater().inflate(R.layout.edit_profile_popup, null);
+
+        // Get references to the views in the popup layout
+        EditText edtEmployeeName = view.findViewById(R.id.idEditEmployeeName);
+        EditText edtEmployeePhone = view.findViewById(R.id.idEditEmployeePhoneNumber);
+        EditText edtEmployeeAddress = view.findViewById(R.id.idEditEmployeeAddress);
+        EditText edtEmployeeDepartment = view.findViewById(R.id.idEditEmployeeDepartment);
+        ImageView btnSave = view.findViewById(R.id.idEditUpdateBtn);
+        ImageView btncancle = view.findViewById(R.id.idEditCancleBtn);
+
+        // Set the current employee data to the EditText fields
+        edtEmployeeName.setText(employeeInfo.getEmployeeName());
+        edtEmployeePhone.setText(employeeInfo.getEmployeeContactNumber());
+        edtEmployeeAddress.setText(employeeInfo.getEmployeeAddress());
+        edtEmployeeDepartment.setText(employeeInfo.getEmployeeDepartment());
+        // Create the dialog
+        builder.setView(view);
+        final AlertDialog dialog = builder.create();
+
+        // Set click listener for the Save button
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the updated data from the EditText fields
+                String updatedName = edtEmployeeName.getText().toString().trim();
+                String updatedPhone = edtEmployeePhone.getText().toString().trim();
+                String updatedAddress = edtEmployeeAddress.getText().toString().trim();
+                String updateDepartment = edtEmployeeDepartment.getText().toString().trim();
+
+                // Validate the data
+                if (TextUtils.isEmpty(updatedName) || TextUtils.isEmpty(updatedPhone) || TextUtils.isEmpty(updatedAddress) || TextUtils.isEmpty(updateDepartment)) {
+                    Toast.makeText(Profile.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Update the employee data
+                employeeInfo.setEmployeeName(updatedName);
+                employeeInfo.setEmployeeContactNumber(updatedPhone);
+                employeeInfo.setEmployeeAddress(updatedAddress);
+                employeeInfo.setEmployeeDepartment(updateDepartment);
+
+                // Save the updated data to Firebase
+                userRef.setValue(employeeInfo)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Profile.this, "Failed to update profile", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                dialog.dismiss(); // Dismiss the dialog
+            }
+        });
+
+        btncancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Dismiss the popup without saving changes
+                dialog.dismiss();
+            }
+        });
+
+        // Show the dialog
+        dialog.show();
+    }
+
+
 }

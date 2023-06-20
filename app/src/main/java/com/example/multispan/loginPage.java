@@ -2,18 +2,23 @@ package com.example.multispan;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -52,6 +57,11 @@ public class loginPage extends AppCompatActivity {
                             .show();
                     return;
                 }
+                // Validation for correct email format
+                if (!isValidEmail(emailCheck)) {
+                    Toast.makeText(getApplicationContext(), "Please enter a valid email address!", Toast.LENGTH_LONG).show();
+                    return;
+                }
 
                 if (TextUtils.isEmpty(passCheck)) {
                     Toast.makeText(getApplicationContext(),
@@ -60,6 +70,13 @@ public class loginPage extends AppCompatActivity {
                             .show();
                     return;
                 }
+                // Validation for password length
+                if (TextUtils.isEmpty(passCheck) || passCheck.length() < 6) {
+                    Toast.makeText(getApplicationContext(), "Password should be at least 6 characters!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+
                 // signin existing user
                 mAuth.signInWithEmailAndPassword(emailCheck, passCheck)
                         .addOnCompleteListener(
@@ -104,6 +121,9 @@ public class loginPage extends AppCompatActivity {
             }
         });
     }
+    private boolean isValidEmail(CharSequence email) {
+        return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -116,4 +136,5 @@ public class loginPage extends AppCompatActivity {
             finish(); // Close the login activity
         }
     }
+
 }

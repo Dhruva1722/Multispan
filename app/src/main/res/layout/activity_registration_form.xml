@@ -54,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
+                android:textColor="@color/black"
                 android:id="@+id/registerNameID"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -71,6 +72,7 @@
                     android:drawableRight="@drawable/baseline_mail_outline_24"
                     android:layout_width="match_parent"
                     android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -80,15 +82,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Your password"
-                android:layout_marginBottom="10dp">
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="10dp"
+                app:passwordToggleTint="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/registerPasswordID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:inputType="textPassword"
-                    android:drawableRight="@drawable/baseline_remove_red_eye_24"/>
+                    android:textColor="@color/black"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,7 +135,7 @@
             android:layout_height="wrap_content"
             android:text="Registration"
             android:textAllCaps="false"
-            android:textSize="10sp"
+            android:textSize="13sp"
             android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp" />
