@@ -9,7 +9,15 @@
         <item name="colorPrimary">#034A97</item>
         <item name="colorOnPrimary">#FFFFFF</item>
 
+
+
     </style>
+    <style name="MyCustomTabLayout" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+
+    </style>
+
 
     <style name="Theme.Multispan" parent="Base.Theme.Multispan" />
 </resources>

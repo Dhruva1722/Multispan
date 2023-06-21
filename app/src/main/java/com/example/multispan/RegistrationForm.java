@@ -109,7 +109,7 @@ public class RegistrationForm extends AppCompatActivity {
                                     SignInMethodQueryResult result = task.getResult();
                                     if (result != null && result.getSignInMethods() != null && result.getSignInMethods().size() > 0) {
                                         // Email ID already exists
-                                        Toast.makeText(RegistrationForm.this, "Email ID already exists", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegistrationForm.this, "Email ID already exists pls login ", Toast.LENGTH_SHORT).show();
                                     } else {
 
                                         mAuth.createUserWithEmailAndPassword(email1, pass1)

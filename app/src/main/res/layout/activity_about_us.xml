@@ -7,134 +7,59 @@
     tools:context=".AboutUs">
 
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalscrollview"
+
+    <RelativeLayout
+        android:id="@+id/rlImgBG"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:background="#CDDCEA">
+        android:layout_height="200dp"
+        android:background="@drawable/company_img">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+    </RelativeLayout>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/web"
-                android:layout_gravity="center"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/design"
-                android:layout_gravity="center"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/hr"
-                android:layout_gravity="center"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/add"
-                android:layout_gravity="center"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/process"
-                android:layout_gravity="center"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/editimg"
-                android:layout_gravity="center"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:padding="5dp"
-                android:src="@drawable/other"
-                android:layout_gravity="center"/>
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
-
-
-
-<LinearLayout
-    android:id="@+id/aboutLY1_id"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_below="@id/horizontalscrollview"
-    android:layout_margin="10dp"
-    android:padding="5dp">
-
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/offive"
-        android:padding="5dp"/>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/assembly"
-        android:padding="5dp"/>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/marketing"
-        android:padding="5dp"/>
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/research"
-        android:padding="5dp"/>
-
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/aboutLY1_id">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Multispan Control Instruments Pvt Ltd"
+        android:textColor="#010D19"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inception in 1986 :With a modest beginning in 1986 in 1200 sq ft workshop area, “Multispan
-            Instruments Company” was founded on the principles of providing user-friendly and “frugal” innovation
-            based panel mounted Temperature controllers for injection moulding, extrusion units and other plastic
-            processing machinery manufacturers in India. In period, 1990-1995 company widened its product offerings
-            like Digital timers  counters which complimented Temperature controller in control panels.During 1995-2000,
-            with more than 50 products, the company RandD efforts transitioned these products to micro-controller
-            based design from solid-state based technology. In the same period, the company setup area was totaling
-            around 3500 sq ft area."
-            android:layout_margin="7dp"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:padding="5dp"/>
+    <TextView
+        android:id="@+id/border2"
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:background="#03497C"
+        android:layout_marginTop="7dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleTxt" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/border2"
+        app:tabTextAppearance="@style/MyCustomTabLayout"
+        app:tabMode="scrollable"
+        app:tabInlineLabel="true"
+        app:tabTextColor="@color/black"
+        app:tabIndicatorColor="#C1C9CF"
+        app:tabSelectedTextColor="#F0F7FB"
+        android:background="@color/fui_transparent"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlImgBG"
+        android:layout_margin="5dp"
+        android:background="#F3F7FA"/>
 
 
 
-    </LinearLayout>
 
 </RelativeLayout>
