@@ -36,45 +36,45 @@ public class Scince1986Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_scince1986, container, false);
-        firebaseDatabase = FirebaseDatabase.getInstance();
-
-        // below line is used to get
-        // reference for our database.
-        databaseReference = firebaseDatabase.getReference("Data");
-
-        // initializing our object class variable.
-         retrieveTV = view.findViewById(R.id.idTVRetrieveData);
-
-        // calling method
-        // for getting data.
-        getdata();
-        return view;
+//        firebaseDatabase = FirebaseDatabase.getInstance();
+//
+//        // below line is used to get
+//        // reference for our database.
+//        databaseReference = firebaseDatabase.getReference("Data");
+//
+//        // initializing our object class variable.
+//         retrieveTV = view.findViewById(R.id.idTVRetrieveData);
+//
+//        // calling method
+//        // for getting data.
+//        getdata();
+      return view;
     }
-    @Override
-    public void onResume() {
-        super.onResume();
-        getdata();
-    }
-    private void getdata() {
-
-        // calling add value event listener method
-        // for getting the values from database.
-        databaseReference.addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
-                retrieveTV.setText(value);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                // calling on cancelled method when we receive
-                // any error or we are not able to get the data.
-                Toast.makeText(getActivity(), "Fail to get data.", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        getdata();
+//    }
+//    private void getdata() {
+//
+//        // calling add value event listener method
+//        // for getting the values from database.
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                String value = snapshot.getValue(String.class);
+//                retrieveTV.setText(value);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                // calling on cancelled method when we receive
+//                // any error or we are not able to get the data.
+//                Toast.makeText(getActivity(), "Fail to get data.", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
 
 }

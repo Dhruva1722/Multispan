@@ -1,82 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Scince1986Fragment">
+    tools:context=".Scince1986Fragment"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-       android:gravity="center_horizontal">
+
 
         <TextView
             android:id="@+id/InceptionTxtID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inception in 1986"
-            android:textSize="25sp"
-            android:layout_gravity="left"
-            android:layout_margin="5dp"
-            android:textColor="@color/black"/>
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#044D85"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="3dp"/>
+    <TextView
+        android:id="@+id/border2"
+        android:layout_width="90dp"
+        android:layout_height="1dp"
+        android:background="#6D9FC3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp" />
 
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="360dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center">
+        
+        <LinearLayout
+            android:id="@+id/scienceLY1"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:gravity="center">
         <TextView
             android:id="@+id/idTVRetrieveData"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textAlignment="center"
             android:layout_margin="5dp"
-            android:layout_below="@id/InceptionTxtID"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="Founded in 1986, Multispan Instruments Company started by providing user-friendly temperature controllers for plastic processing machinery manufacturers in India, focusing on frugal innovation."
             android:textColor="@color/black"
-            android:textSize="10sp" />
+            android:textSize="9sp"
+            android:textStyle="italic"/>
 
+        <ImageView
+            android:id="@+id/offiveID"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/offive" />
+        </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/scienceLY2"
             android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:layout_below="@id/scienceLY1">
+
+        <ImageView
+            android:id="@+id/researchID"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/offive" />
+
+        <TextView
+            android:id="@+id/idTVRetrieveData1"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/idTVRetrieveData">
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="In period, 1990-1995 company widened its product offerings like Digital timers counters which complimented Temperature controller in control panels."
+            android:textColor="@color/black"
+            android:textSize="9sp"
+            android:textStyle="italic"/>
 
-            <ImageView
-                android:id="@+id/offiveID"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/offive"
-                android:layout_margin="7dp"/>
+        </LinearLayout>
 
-            <ImageView
-                android:id="@+id/researchID"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_margin="7dp"
-                android:src="@drawable/research"
-                android:layout_toRightOf="@id/offiveID"/>
-
-            <ImageView
-                android:id="@+id/marketingID"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_margin="7dp"
-                android:src="@drawable/marketing"
-                android:layout_toRightOf="@id/researchID"/>
-
-            <ImageView
-                android:id="@+id/assemblyID"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_margin="7dp"
-                android:src="@drawable/assembly"
-                android:layout_toRightOf="@id/marketingID"/>
+        <LinearLayout
+            android:id="@+id/scienceLY3"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:layout_below="@id/scienceLY2">
+        <TextView
+            android:id="@+id/idTVRetrieveData3"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="From 1995 to 2000, Multispan Instruments Company transitioned over 50 products to micro-controller based designs and expanded its setup area to 3500 sq ft."
+            android:textColor="@color/black"
+            android:textSize="9sp"
+            android:textStyle="italic"/>
 
 
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/assemblyID"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/assembly" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/scinceLY4"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:layout_below="@id/scienceLY3">
+        <ImageView
+            android:id="@+id/marketingID"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/idTVRetrieveData3"
+            android:src="@drawable/assembly"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/idTVRetrieveData4"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="Multispan revolutionized temperature control in 2003 with PID-based technology, gaining nationwide prominence and expanding facilities to 10,000+ sq ft with 100+ products."
+            android:textColor="@color/black"
+            android:textSize="9sp"
+            android:textStyle="italic"/>
+
+        </LinearLayout>
+    </RelativeLayout>
 
     </LinearLayout>
 
 
 
-</ScrollView>

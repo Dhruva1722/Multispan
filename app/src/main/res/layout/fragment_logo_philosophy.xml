@@ -5,10 +5,72 @@
     android:layout_height="match_parent"
     tools:context=".LogoPhilosophyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logo"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:textColor="#044D85"/>
+
+        <TextView
+            android:id="@+id/border2"
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:background="#6D9FC3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_arrow_right_24"
+        android:text="Our logo represents the incoming of new range of practical product innovations thatsimplifies the automation of industrial applications.The clutter-free,slimmer definition portrays our straightforward perspective and transparent relationship principles in business"
+        android:layout_margin="7dp"
+        android:textStyle="italic"
+        android:textSize="12sp"/>
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logophilosophy"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Philosophy"
+            android:textSize="13sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textColor="#044D85"/>
+        <TextView
+            android:id="@+id/border"
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:background="#6D9FC3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="Multispan strives to build a respectful pioneering team on the thought that its people are the greatest assets,which make it possible for us to deliver innovative, affordable user-friendly solutions for varied industrial applications"
+            android:layout_margin="7dp"
+            android:textSize="12sp"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
 </FrameLayout>

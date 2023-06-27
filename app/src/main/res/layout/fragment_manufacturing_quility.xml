@@ -5,10 +5,142 @@
     android:layout_height="match_parent"
     tools:context=".ManufacturingQuilityFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manufacturing and Quality"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:textColor="#044D85"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/border2"
+        android:layout_width="140dp"
+        android:layout_height="1dp"
+        android:background="#6D9FC3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="left">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/qualitycheck"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Quality Checking"
+               android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_circle_24"
+                android:drawablePadding="5dp"
+                android:textSize="7sp"
+                android:layout_margin="1dp"
+                android:text="With a 25-member R/D team"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_circle_24"
+                android:drawablePadding="5dp"
+                android:textSize="7sp"
+                android:layout_margin="1dp"
+                android:text="Collaborative energy among creatives, engineers, and business."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_circle_24"
+                android:drawablePadding="5dp"
+                android:textSize="7sp"
+                android:layout_margin="1dp"
+                android:text="for making a product a winner"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="right">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Raw material Testing"
+                    android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_circle_24"
+                        android:drawablePadding="5dp"
+                        android:textSize="7sp"
+                        android:layout_margin="1dp"
+                        android:text="Collaboration and user centered design"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_circle_24"
+                        android:drawablePadding="5dp"
+                        android:textSize="7sp"
+                        android:layout_margin="1dp"
+                        android:text="embedded across different parts of the company to succeed"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_circle_24"
+                        android:drawablePadding="5dp"
+                        android:textSize="7sp"
+                        android:layout_margin="1dp"
+                        android:text="user empathy yields more useful engineering products"/>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/rawmaterial"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="          With a manufacturing capacity of 35,000 sq ft, we prioritize product quality through rigorous quality checks and field trials. Reliability tests and adherence to ISO standards ensure consistent quality assurance throughout."
+            android:textStyle="italic"
+            android:textSize="10sp"
+            android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
 
 </FrameLayout>

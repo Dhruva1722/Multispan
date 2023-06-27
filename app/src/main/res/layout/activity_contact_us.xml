@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ContactUs"
-    android:background="#F0F3F6">
+   >
 
     <RelativeLayout
         android:id="@+id/rlContactImgBG"
@@ -14,6 +14,7 @@
         android:background="@drawable/company_img">
 
     </RelativeLayout>
+
     <TextView
         android:id="@+id/titleTxt"
         android:layout_width="wrap_content"
@@ -52,14 +53,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/rlContactImgBG"
-        android:text="Listening to customized needs and Customization is our Motto"
-        android:textSize="12sp"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Listening to customized needs and Customization is our Motto"
+        android:textSize="10sp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_below="@id/Txt2"
         android:orientation="vertical"
         android:layout_margin="10dp">
@@ -75,12 +78,14 @@
                 android:id="@+id/idContactName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textColor="@color/black"
                 android:drawableLeft="@drawable/baseline_person_24"
-                android:drawablePadding="10dp"/>
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
 
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -93,7 +98,7 @@
                 android:id="@+id/idContactPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textColor="@color/black"
                 android:drawableLeft="@drawable/baseline_call_24"
                 android:drawablePadding="10dp"/>
@@ -103,19 +108,58 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Address"
+            android:hint="City ,State ,Country"
             android:layout_marginBottom="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idContactAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textColor="@color/black"
                 android:drawableLeft="@drawable/baseline_location_on_24"
                 android:drawablePadding="10dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Message"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idContactMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_send_24"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:inputType="textMultiLine"
+                android:textSize="10sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Submit"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anything More! Get in touch with us"
+            android:textSize="15sp"/>
 
 
 

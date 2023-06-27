@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/rlImgBG"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         android:background="@drawable/company_img">
 
     </RelativeLayout>
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="Multispan Control Instruments Pvt Ltd"
         android:textColor="#010D19"
         android:textStyle="bold"
@@ -55,9 +55,7 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/rlImgBG"
-        android:layout_margin="5dp"
-        android:background="#F3F7FA"/>
+        android:layout_below="@id/rlImgBG" />
 
 
 

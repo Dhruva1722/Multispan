@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VDFPanel"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0457B1"
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/white">
+
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+       <LinearLayout
+           android:id="@+id/lyslave1ID"
+           android:layout_width="150dp"
+           android:layout_height="150dp"
+           android:orientation="vertical"
+           android:gravity="center"
+           android:layout_marginRight="10dp"
+           android:background="@drawable/cardview"
+           android:backgroundTint="#C9ECFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AVH14"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text=" '01' "
+               android:textColor="@color/black"
+               android:textSize="10dp"
+               android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACMFM1"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"/>
+       </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lyslave2ID"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/cardview"
+            android:backgroundTint="#C9ECFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AVH14"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" '02' "
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACMFM2"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -5,10 +5,83 @@
     android:layout_height="match_parent"
     tools:context=".ResearchDevelopmentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Research and Development"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:textColor="#044D85"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/border2"
+        android:layout_width="140dp"
+        android:layout_height="1dp"
+        android:background="#6D9FC3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="Our team excels in user-centered engineering, delivering products based on customer needs in a short timeframe. "
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/researchdevelopment"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/researchlab"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_arrow_right_24"
+            android:text="With a wide range of off-the-shelf and customized offerings, we prioritize great design and collaboration between designers, engineers, and business. Multispan's focus on user empathy leads to impactful and useful engineering solutions. "
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_margin="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/qualitycheck"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/rawmaterial"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -5,75 +5,192 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DataFragment">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="200dp"
-        android:id="@+id/examName"
-        android:textSize="16sp"
-        android:layout_marginStart="20dp"
-        android:text="First Exam"
-        android:textColor="@color/black"
-        android:layout_marginEnd="20dp"
-        android:maxLines="1"
-        android:layout_marginTop="15dp"
-        android:layout_height="wrap_content"/>
-
-    <ImageView
-        android:id="@+id/examPic"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/examName"
-        app:tint="#838282"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="7dp"
-        app:srcCompat="@drawable/baseline_schedule_24"/>
-
-    <TextView
-        android:id="@+id/examDate"
-        android:layout_toEndOf="@+id/examPic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/examName"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="10dp"
-        android:gravity="center"
-        android:text="May 23, 2015"
-        android:textSize="16sp"/>
-
-    <ImageView
-        android:id="@+id/examPic2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/examDate"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="7dp"
-        app:srcCompat="@drawable/baseline_school_24"
-        app:tint="#838282" />
-
-    <TextView
-        android:id="@+id/examMessage"
-        android:layout_toEndOf="@+id/examPic2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/examDate"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:gravity="center"
-        android:text="Best Of Luck"
-        android:textSize="16sp"/>
-
-
-    <TextView
-        android:id="@+id/border2"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_alignParentBottom="true"
-        android:background="#808080"/>
-</RelativeLayout>
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/VFDPAnelID"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3- Induction Motor Speed Controlling VFD-Panel"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/SynchronousMotorID"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Synchronous Motor #DC Shunt generator-Panel"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Induction Motor Control Panel"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Induction Motor Control Panel"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transformer Trainer"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DC Shunt Machine with Mechanical Loading Panel"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DC Series Machine with Mechanical "
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DC Shunt Motor #Alternator Experiment Panel-1 "
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#E4EDF3"
+                android:background="@drawable/cardview">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DC Shunt Motor #Alternator Experiment Panel-1 "
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
 </FrameLayout>
