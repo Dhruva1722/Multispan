@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_splash_screen_scene"
     tools:context=".SplashScreen">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="148dp"
+        android:layout_height="152dp"
+        android:background="@drawable/splash_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/splash_img"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/multispan_logo" />
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/multispan_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/splashtxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Multispan"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_below="@id/splash_img"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:padding="5dp"
-        android:textColor="#2377DD"/>
+    <ImageView
+        android:id="@+id/white_splash_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/multispan_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
 
     <ProgressBar
         android:id="@+id/idPBLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/splashtxt"
+
         android:layout_centerInParent="true"
         android:layout_margin="5dp"
-        android:indeterminateTint="#817979" />
+        android:indeterminateTint="#817979"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="692dp" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

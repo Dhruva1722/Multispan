@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         drawerLayout = findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        // Enable the Up button
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         actionBarDrawerToggle.syncState();
 

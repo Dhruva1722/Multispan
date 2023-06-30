@@ -22,7 +22,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/VFDPAnelID"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -32,17 +32,18 @@
                     android:layout_height="wrap_content"
                     android:text="3- Induction Motor Speed Controlling VFD-Panel"
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
-
++
             </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/SynchronousMotorID"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -52,7 +53,8 @@
                     android:layout_height="wrap_content"
                     android:text=" Synchronous Motor #DC Shunt generator-Panel"
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 
@@ -61,7 +63,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -71,7 +73,8 @@
                     android:layout_height="wrap_content"
                     android:text=" Induction Motor Control Panel"
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 
@@ -80,7 +83,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -90,7 +93,8 @@
                     android:layout_height="wrap_content"
                     android:text="Induction Motor Control Panel"
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 
@@ -98,7 +102,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -108,7 +112,8 @@
                     android:layout_height="wrap_content"
                     android:text="Transformer Trainer"
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 
@@ -116,7 +121,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -126,7 +131,9 @@
                     android:layout_height="wrap_content"
                     android:text="DC Shunt Machine with Mechanical Loading Panel"
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
+                    android:textAlignment="center"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 
@@ -135,7 +142,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -145,15 +152,16 @@
                     android:layout_height="wrap_content"
                     android:text="DC Series Machine with Mechanical "
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
                     android:textStyle="italic"
+                    android:padding="20dp"
                     android:textColor="@color/black"/>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -163,7 +171,9 @@
                     android:layout_height="wrap_content"
                     android:text="DC Shunt Motor #Alternator Experiment Panel-1 "
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
+                    android:textAlignment="center"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 
@@ -171,7 +181,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#E4EDF3"
                 android:background="@drawable/cardview">
@@ -181,7 +191,8 @@
                     android:layout_height="wrap_content"
                     android:text="DC Shunt Motor #Alternator Experiment Panel-1 "
                     android:layout_gravity="center"
-                    android:textSize="12dp"
+                    android:textSize="16dp"
+                    android:padding="20dp"
                     android:textStyle="italic"
                     android:textColor="@color/black"/>
 

@@ -13,10 +13,6 @@ import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
 
-    ImageView img;
-    TextView text;
-    Animation top , bottom;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,15 +34,6 @@ public class SplashScreen extends AppCompatActivity {
             return;
         }
 
-
-        img = findViewById(R.id.splash_img);
-        text = findViewById(R.id.splashtxt);
-
-        top = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.splash_anim);
-        bottom = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.text);
-
-        img.setAnimation(top);
-        text.setAnimation(bottom);
 
 
         new Handler().postDelayed(new Runnable() {

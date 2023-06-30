@@ -20,12 +20,13 @@
         android:layout_height="match_parent"
         android:id="@+id/drawer_layout"
         android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottomNavigationView"
         android:contentDescription="Navigation drawer">
         <RelativeLayout
             android:id="@+id/relativelayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="65dp"
+
             android:padding="5dp">
         </RelativeLayout>
 
@@ -41,16 +42,12 @@
     </androidx.drawerlayout.widget.DrawerLayout>
 
 
-
-
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottomnavbar"
-        android:layout_margin="10dp"/>
+        app:menu="@menu/bottomnavbar" />
 
 
 </RelativeLayout>

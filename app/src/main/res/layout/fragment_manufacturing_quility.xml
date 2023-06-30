@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Manufacturing and Quality"
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:layout_marginTop="6dp"
         android:layout_marginLeft="5dp"
         android:textStyle="bold"
@@ -36,7 +36,7 @@
             android:layout_gravity="left">
             <ImageView
                 android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:src="@drawable/qualitycheck"/>
 
         <LinearLayout
@@ -48,30 +48,30 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Quality Checking"
-               android:textSize="10sp"/>
+               android:textSize="12sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_circle_24"
+                android:drawableStart="@drawable/circle"
                 android:drawablePadding="5dp"
-                android:textSize="7sp"
+                android:textSize="9sp"
                 android:layout_margin="1dp"
                 android:text="With a 25-member R/D team"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_circle_24"
+                android:drawableStart="@drawable/circle"
                 android:drawablePadding="5dp"
-                android:textSize="7sp"
+                android:textSize="9sp"
                 android:layout_margin="1dp"
                 android:text="Collaborative energy among creatives, engineers, and business."/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_circle_24"
+                android:drawableStart="@drawable/circle"
                 android:drawablePadding="5dp"
-                android:textSize="7sp"
+                android:textSize="9sp"
                 android:layout_margin="1dp"
                 android:text="for making a product a winner"/>
 
@@ -94,31 +94,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Raw material Testing"
-                    android:textSize="10sp"/>
+                    android:textSize="12sp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/baseline_circle_24"
+                        android:drawableStart="@drawable/circle"
                         android:drawablePadding="5dp"
-                        android:textSize="7sp"
+                        android:textSize="9sp"
                         android:layout_margin="1dp"
                         android:text="Collaboration and user centered design"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/baseline_circle_24"
+                        android:drawableStart="@drawable/circle"
                         android:drawablePadding="5dp"
-                        android:textSize="7sp"
+                        android:textSize="9sp"
                         android:layout_margin="1dp"
                         android:text="embedded across different parts of the company to succeed"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/baseline_circle_24"
+                        android:drawableStart="@drawable/circle"
                         android:drawablePadding="5dp"
-                        android:textSize="7sp"
+                        android:textSize="9sp"
                         android:layout_margin="1dp"
                         android:text="user empathy yields more useful engineering products"/>
 
@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:text="          With a manufacturing capacity of 35,000 sq ft, we prioritize product quality through rigorous quality checks and field trials. Reliability tests and adherence to ISO standards ensure consistent quality assurance throughout."
             android:textStyle="italic"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:layout_margin="5dp"/>
 
 

@@ -38,7 +38,7 @@ public class ACMFM1<arg0> extends AppCompatActivity  implements AdapterView.OnIt
         AboutUsPagerAdapter pagerAdapter = new AboutUsPagerAdapter(getSupportFragmentManager());
 
         // Add fragments to the PagerAdapter
-        pagerAdapter.addFragment(new Scince1986Fragment(), "KKIH");
+        pagerAdapter.addFragment(new KKHFragment(), "KKIH");
         pagerAdapter.addFragment(new LogoPhilosophyFragment(), "Voltage");
         pagerAdapter.addFragment(new ResearchDevelopmentFragment(), "Current");
         pagerAdapter.addFragment(new ManufacturingQuilityFragment(), "Walt");

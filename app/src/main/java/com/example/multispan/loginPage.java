@@ -27,7 +27,7 @@ public class loginPage extends AppCompatActivity {
 
     private   EditText email,pass;
     private  Button loginbtn;
-    private  TextView signup;
+    private  TextView signup ,skiptxt;
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,14 @@ public class loginPage extends AppCompatActivity {
         loginbtn = findViewById(R.id.loginBtnID);
         signup = findViewById(R.id.loginSignUpID);
 
+//        skiptxt = findViewById(R.id.skipTxtID);
+//        skiptxt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(loginPage.this, MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override

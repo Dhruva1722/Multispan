@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="6dp"
-                android:padding="7dp"
+                android:padding="10dp"
                 android:background="#DEEFF8">
 
 
@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Profile"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:drawablePadding="10dp"
                     android:drawableLeft="@drawable/baseline_account_circle_24"
                     android:textColor="@color/black" />
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="6dp"
-                android:padding="7dp"
+                 android:padding="10dp"
                 android:background="#DEEFF8">
 
                 <TextView
@@ -52,7 +52,7 @@
                     android:text="AboutUs"
                     android:drawablePadding="10dp"
                     android:drawableLeft="@drawable/baseline_quiz_24"
-                    android:textSize="15sp"
+                     android:textSize="17sp"
                     android:textColor="@color/black" />
             </LinearLayout>
 
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="6dp"
-                android:padding="7dp"
+                 android:padding="10dp"
                 android:background="#DEEFF8">
 
                 <TextView
@@ -72,7 +72,7 @@
                     android:drawableLeft="@drawable/baseline_contact_page_24"
                     android:drawablePadding="10dp"
                     android:textColor="@color/black"
-                    android:textSize="15sp"/>
+                     android:textSize="17sp"/>
             </LinearLayout>
 
 
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_margin="6dp"
-                android:padding="7dp"
+                 android:padding="10dp"
                 android:background="#DEEFF8">
 
                 <TextView
@@ -91,7 +91,7 @@
                     android:text="Logout"
                     android:drawableLeft="@drawable/baseline_logout_24"
                     android:drawablePadding="10dp"
-                    android:textSize="15sp"
+                     android:textSize="17sp"
                     android:textColor="@color/black" />
 
             </LinearLayout>
