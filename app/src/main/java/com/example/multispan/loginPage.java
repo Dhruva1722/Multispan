@@ -24,7 +24,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class loginPage extends AppCompatActivity {
-
     private   EditText email,pass;
     private  Button loginbtn;
     private  TextView signup ,skiptxt;

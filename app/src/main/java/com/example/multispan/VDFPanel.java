@@ -16,7 +16,7 @@ import java.util.Calendar;
 public class VDFPanel extends AppCompatActivity {
 
     LinearLayout acmfm1;
-    TextView dateTimeInLongTextView, format1;
+    TextView  format1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
